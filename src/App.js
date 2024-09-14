@@ -42,5 +42,3 @@ const App = () => {
 };
 
 export default App;
-
-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
