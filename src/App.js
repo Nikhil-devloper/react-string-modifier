@@ -7,7 +7,7 @@ const App = () => {
   const [copied, setCopied] = useState(false);
 
   const handleModify = () => {
-    const resultString = `find . -type f \( -name 'config.json' -o -name 'globalConfig.json' \) -exec sed -i '' -E 's/"vaultToken": "[^"]*"/"vaultToken": "${inputString}"/' {} \;`;
+    const resultString = `find . -type f \\( -name 'config.json' -o -name 'globalConfig.json' \\) -exec sed -i '' -E 's/"vaultToken": "[^"]*"/"vaultToken": "${inputString}"/' {} \\;`;
     setResult(resultString);
     navigator.clipboard.writeText(resultString);
     setCopied(true);
